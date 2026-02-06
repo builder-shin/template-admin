@@ -1,49 +1,49 @@
 import type { InfobarContent } from '@/components/ui/infobar';
 
 export const workspacesInfoContent: InfobarContent = {
-  title: 'Workspaces Management',
+  title: '워크스페이스 관리',
   sections: [
     {
-      title: 'Overview',
+      title: '개요',
       description:
-        'The Workspaces page allows you to manage your workspaces and switch between them. This feature is powered by Clerk Organizations, which enables multi-tenant workspace management. You can view all available workspaces, create new ones, and switch your active workspace.',
+        '워크스페이스 페이지에서 워크스페이스를 관리하고 전환할 수 있습니다. 이 기능은 멀티 테넌트 워크스페이스 관리를 지원하는 Clerk Organizations 기반입니다. 사용 가능한 모든 워크스페이스를 확인하고, 새로 생성하거나 활성 워크스페이스를 전환할 수 있습니다.',
       links: [
         {
-          title: 'Clerk Organizations Documentation',
+          title: 'Clerk Organizations 문서',
           url: 'https://clerk.com/docs/organizations/overview'
         }
       ]
     },
     {
-      title: 'Creating Workspaces',
+      title: '워크스페이스 생성',
       description:
-        'To create a new workspace, click the "Create Organization" button. You will be prompted to enter a workspace name and configure initial settings. Once created, you can switch to the new workspace and start managing it.',
+        '새 워크스페이스를 생성하려면 "조직 만들기" 버튼을 클릭하세요. 워크스페이스 이름을 입력하고 초기 설정을 구성할 수 있습니다. 생성 후 새 워크스페이스로 전환하여 관리를 시작할 수 있습니다.',
       links: [
         {
-          title: 'Multi-tenant Authentication Guide',
+          title: '멀티 테넌트 인증 가이드',
           url: 'https://clerk.com/blog/how-to-build-multitenant-authentication-with-clerk'
         }
       ]
     },
     {
-      title: 'Switching Workspaces',
+      title: '워크스페이스 전환',
       description:
-        'You can switch between workspaces by clicking on a workspace in the list. The selected workspace becomes your active organization context, and all organization-specific features will use this workspace.',
+        '목록에서 워크스페이스를 클릭하여 전환할 수 있습니다. 선택한 워크스페이스가 활성 조직 컨텍스트가 되며, 모든 조직별 기능이 해당 워크스페이스를 사용합니다.',
       links: []
     },
     {
-      title: 'Workspace Features',
+      title: '워크스페이스 기능',
       description:
-        'Each workspace operates independently with its own team members, roles, permissions, and billing. This allows you to manage multiple projects or teams within a single account while keeping their data and settings separate.',
+        '각 워크스페이스는 고유한 팀원, 역할, 권한, 결제 정보를 가지고 독립적으로 운영됩니다. 하나의 계정 내에서 여러 프로젝트나 팀을 관리하면서 데이터와 설정을 분리할 수 있습니다.',
       links: []
     },
     {
-      title: 'Server-Side Permission Checks',
+      title: '서버 측 권한 검사',
       description:
-        "This application follows Clerk's recommended patterns for multi-tenant authentication. Server-side permission checks ensure that users can only access resources for their active organization.",
+        '이 애플리케이션은 멀티 테넌트 인증을 위한 Clerk 권장 패턴을 따릅니다. 서버 측 권한 검사를 통해 사용자가 활성 조직의 리소스에만 접근할 수 있도록 보장합니다.',
       links: [
         {
-          title: 'Clerk Organizations Documentation',
+          title: 'Clerk Organizations 문서',
           url: 'https://clerk.com/docs/organizations/overview'
         }
       ]
@@ -52,189 +52,189 @@ export const workspacesInfoContent: InfobarContent = {
 };
 
 export const teamInfoContent: InfobarContent = {
-  title: 'Team Management',
+  title: '팀 관리',
   sections: [
     {
-      title: 'Overview',
+      title: '개요',
       description:
-        "The Team Management page allows you to manage your workspace team, including members, roles, security settings, and more. This page provides comprehensive organization management through Clerk's OrganizationProfile component.",
+        '팀 관리 페이지에서 팀원, 역할, 보안 설정 등을 관리할 수 있습니다. 이 페이지는 Clerk의 OrganizationProfile 컴포넌트를 통해 종합적인 조직 관리 기능을 제공합니다.',
       links: [
         {
-          title: 'Clerk Organizations Documentation',
+          title: 'Clerk Organizations 문서',
           url: 'https://clerk.com/docs/organizations/overview'
         }
       ]
     },
     {
-      title: 'Managing Team Members',
+      title: '팀원 관리',
       description:
-        'You can add, remove, and manage team members from this page. Invite new members by email, assign roles, and control their access levels. Each member can have different permissions based on their role.',
+        '이 페이지에서 팀원을 추가, 제거, 관리할 수 있습니다. 이메일로 새 멤버를 초대하고, 역할을 할당하며, 접근 수준을 제어할 수 있습니다. 각 멤버는 역할에 따라 다른 권한을 가질 수 있습니다.',
       links: []
     },
     {
-      title: 'Roles and Permissions',
+      title: '역할 및 권한',
       description:
-        'Configure default roles and permissions in the Clerk Dashboard under Organizations settings. Roles define what actions team members can perform within the workspace. Common roles include admin, member, and custom roles you define.',
+        'Clerk 대시보드의 Organizations 설정에서 기본 역할과 권한을 구성하세요. 역할은 팀원이 워크스페이스 내에서 수행할 수 있는 작업을 정의합니다. 일반적인 역할에는 관리자, 멤버 및 사용자 정의 역할이 있습니다.',
       links: [
         {
-          title: 'Clerk Organizations Documentation',
+          title: 'Clerk Organizations 문서',
           url: 'https://clerk.com/docs/organizations/overview'
         }
       ]
     },
     {
-      title: 'Security Settings',
+      title: '보안 설정',
       description:
-        "Manage security settings for your workspace, including authentication requirements, session management, and access controls. These settings help protect your organization's data and resources.",
+        '인증 요구사항, 세션 관리, 접근 제어 등 워크스페이스의 보안 설정을 관리합니다. 이러한 설정은 조직의 데이터와 리소스를 보호하는 데 도움이 됩니다.',
       links: []
     },
     {
-      title: 'Organization Settings',
+      title: '조직 설정',
       description:
-        'Configure general organization settings such as name, logo, and other workspace preferences. These settings apply to the entire workspace and affect all team members.',
+        '이름, 로고 및 기타 워크스페이스 기본 설정 등 일반 조직 설정을 구성합니다. 이 설정은 전체 워크스페이스에 적용되며 모든 팀원에게 영향을 미칩니다.',
       links: []
     },
     {
-      title: 'Navigation RBAC System',
+      title: '네비게이션 RBAC 시스템',
       description:
-        'The application includes a fully client-side navigation filtering system using the `useNav` hook. It supports `requireOrg`, `permission`, and `role` checks for instant access control. Navigation items are configured in `src/config/nav-config.ts` with `access` properties.',
+        '이 애플리케이션은 useNav 훅을 사용한 완전한 클라이언트 측 네비게이션 필터링 시스템을 포함합니다. requireOrg, permission, role 검사를 지원하여 즉각적인 접근 제어를 제공합니다. 네비게이션 항목은 src/config/nav-config.ts에서 access 속성으로 구성됩니다.',
       links: []
     }
   ]
 };
 
 export const billingInfoContent: InfobarContent = {
-  title: 'Billing & Plans',
+  title: '결제 및 요금제',
   sections: [
     {
-      title: 'Overview',
+      title: '개요',
       description:
-        "The Billing page allows you to manage your organization's subscription and usage limits. Plans and subscriptions are managed through Clerk Billing for B2B, which provides organization-level subscription management with integrated Stripe payment processing.",
+        '결제 페이지에서 조직의 구독 및 사용 한도를 관리할 수 있습니다. 요금제와 구독은 Clerk Billing for B2B를 통해 관리되며, Stripe 결제 처리가 통합된 조직 수준의 구독 관리를 제공합니다.',
       links: [
         {
-          title: 'Clerk Billing Documentation',
+          title: 'Clerk Billing 문서',
           url: 'https://clerk.com/docs/billing/overview'
         }
       ]
     },
     {
-      title: 'Available Plans',
+      title: '이용 가능한 요금제',
       description:
-        'View and subscribe to available plans through the pricing table. Plans are created and managed in the Clerk Dashboard. Toggle "Publicly available" on plans to show them in the pricing table. Common plans include free, pro, and team tiers.',
+        '요금표를 통해 이용 가능한 요금제를 확인하고 구독할 수 있습니다. 요금제는 Clerk 대시보드에서 생성 및 관리됩니다. 요금제에서 "공개" 옵션을 활성화하면 요금표에 표시됩니다. 일반적인 요금제에는 무료, 프로, 팀 등급이 있습니다.',
       links: [
         {
-          title: 'Clerk Dashboard - Plans',
+          title: 'Clerk 대시보드 - 요금제',
           url: 'https://dashboard.clerk.com/~/billing/plans'
         }
       ]
     },
     {
-      title: 'Plan Features',
+      title: '요금제 기능',
       description:
-        'Each plan can include specific features that unlock functionality in the application. Features are added to plans in the Clerk Dashboard and can be checked in code using the `has()` function with `feature` checks.',
+        '각 요금제에는 애플리케이션 기능을 활성화하는 특정 기능이 포함될 수 있습니다. 기능은 Clerk 대시보드에서 요금제에 추가되며, 코드에서 has() 함수의 feature 검사를 통해 확인할 수 있습니다.',
       links: []
     },
     {
-      title: 'Access Control',
+      title: '접근 제어',
       description:
-        'Plans and features are used for access control throughout the application. Server-side checks use the `has()` function to verify plan or feature access. Client-side protection uses the `<Protect>` component to conditionally render content based on subscription status.',
+        '요금제와 기능은 애플리케이션 전체의 접근 제어에 사용됩니다. 서버 측에서는 has() 함수를 사용하여 요금제 또는 기능 접근을 확인합니다. 클라이언트 측에서는 <Protect> 컴포넌트를 사용하여 구독 상태에 따라 콘텐츠를 조건부 렌더링합니다.',
       links: []
     },
     {
-      title: 'Billing Cost Structure',
+      title: '결제 비용 구조',
       description:
-        "Clerk Billing costs 0.7% per transaction, plus transaction fees paid directly to Stripe. Clerk Billing is not the same as Stripe Billing - plans and pricing are managed through the Clerk Dashboard and won't sync with existing Stripe products. Clerk uses Stripe only for payment processing.",
+        'Clerk Billing은 거래당 0.7%의 수수료가 발생하며, Stripe에 직접 지불하는 거래 수수료가 추가됩니다. Clerk Billing은 Stripe Billing과 다릅니다. 요금제와 가격은 Clerk 대시보드를 통해 관리되며 기존 Stripe 제품과 동기화되지 않습니다. Clerk은 결제 처리에만 Stripe를 사용합니다.',
       links: []
     },
     {
-      title: 'Setup Requirements',
+      title: '설정 요구사항',
       description:
-        "To enable billing, navigate to Billing Settings in the Clerk Dashboard and enable billing for your application. Choose between Clerk's development gateway (for testing) or your own Stripe account (for production). Note: A Stripe account created for development cannot be used for production.",
+        '결제를 활성화하려면 Clerk 대시보드의 결제 설정으로 이동하여 애플리케이션에 대한 결제를 활성화하세요. Clerk 개발 게이트웨이(테스트용) 또는 자체 Stripe 계정(프로덕션용) 중 선택할 수 있습니다. 참고: 개발용으로 생성된 Stripe 계정은 프로덕션에서 사용할 수 없습니다.',
       links: [
         {
-          title: 'Billing Settings',
+          title: '결제 설정',
           url: 'https://dashboard.clerk.com/~/billing/settings'
         }
       ]
     },
     {
-      title: 'Beta Status',
+      title: '베타 상태',
       description:
-        'Billing is currently in Beta and its APIs are experimental and may undergo breaking changes. To mitigate potential disruptions, we recommend pinning your SDK and `clerk-js` package versions.',
+        '결제 기능은 현재 베타이며 API는 실험적이고 호환성이 깨지는 변경이 있을 수 있습니다. 잠재적 문제를 방지하려면 SDK와 clerk-js 패키지 버전을 고정하는 것을 권장합니다.',
       links: []
     }
   ]
 };
 
 export const productInfoContent: InfobarContent = {
-  title: 'Product Management',
+  title: '상품 관리',
   sections: [
     {
-      title: 'Overview',
+      title: '개요',
       description:
-        'The Products page allows you to manage your product catalog. You can view all products in a table format with server-side functionality including sorting, filtering, pagination, and search capabilities. Use the "Add New" button to create new products.',
+        '상품 페이지에서 상품 카탈로그를 관리할 수 있습니다. 정렬, 필터링, 페이지네이션, 검색 기능이 포함된 서버 측 기능으로 모든 상품을 테이블 형식으로 확인할 수 있습니다. "새 상품" 버튼을 사용하여 새 상품을 등록하세요.',
       links: [
         {
-          title: 'Product Management Guide',
+          title: '상품 관리 가이드',
           url: '#'
         }
       ]
     },
     {
-      title: 'Adding Products',
+      title: '상품 추가',
       description:
-        'To add a new product, click the "Add New" button in the page header. You will be taken to a form where you can enter product details including name, description, price, category, and upload product images.',
+        '새 상품을 추가하려면 페이지 상단의 "새 상품" 버튼을 클릭하세요. 이름, 설명, 가격, 카테고리를 입력하고 상품 이미지를 업로드할 수 있는 양식으로 이동합니다.',
       links: [
         {
-          title: 'Adding Products Documentation',
+          title: '상품 추가 문서',
           url: '#'
         }
       ]
     },
     {
-      title: 'Editing Products',
+      title: '상품 수정',
       description:
-        'You can edit existing products by clicking on a product row in the table. This will open the product edit form where you can modify any product information. Changes are saved automatically when you submit the form.',
+        '테이블에서 상품 행을 클릭하여 기존 상품을 수정할 수 있습니다. 상품 수정 양식이 열리며, 모든 상품 정보를 변경할 수 있습니다. 양식을 제출하면 변경 사항이 자동으로 저장됩니다.',
       links: [
         {
-          title: 'Editing Products Guide',
+          title: '상품 수정 가이드',
           url: '#'
         }
       ]
     },
     {
-      title: 'Deleting Products',
+      title: '상품 삭제',
       description:
-        'Products can be deleted from the product listing table. Click the delete action for the product you want to remove. You will be asked to confirm the deletion before the product is permanently removed from your catalog.',
+        '상품 목록 테이블에서 상품을 삭제할 수 있습니다. 제거하려는 상품의 삭제 버튼을 클릭하세요. 상품이 카탈로그에서 영구 삭제되기 전에 확인을 요청합니다.',
       links: [
         {
-          title: 'Product Deletion Policy',
+          title: '상품 삭제 정책',
           url: '#'
         }
       ]
     },
     {
-      title: 'Table Features',
+      title: '테이블 기능',
       description:
-        'The product table includes several powerful features to help you manage large product catalogs efficiently. You can sort columns by clicking on column headers, filter products using the filter controls, navigate through pages using pagination, and quickly find products using the search functionality.',
+        '상품 테이블에는 대규모 상품 카탈로그를 효율적으로 관리할 수 있는 강력한 기능들이 포함되어 있습니다. 열 헤더를 클릭하여 정렬하고, 필터 컨트롤로 상품을 필터링하며, 페이지네이션으로 페이지를 이동하고, 검색 기능으로 상품을 빠르게 찾을 수 있습니다.',
       links: [
         {
-          title: 'Table Features Documentation',
+          title: '테이블 기능 문서',
           url: '#'
         },
         {
-          title: 'Sorting and Filtering Guide',
+          title: '정렬 및 필터링 가이드',
           url: '#'
         }
       ]
     },
     {
-      title: 'Product Fields',
+      title: '상품 필드',
       description:
-        'Each product can have the following fields: Name (required), Description (optional text), Price (numeric value), Category (for organizing products), and Image Upload (for product photos). All fields can be edited when creating or updating a product.',
+        '각 상품은 다음 필드를 가질 수 있습니다: 이름(필수), 설명(선택 텍스트), 가격(숫자 값), 카테고리(상품 분류용), 이미지 업로드(상품 사진용). 모든 필드는 상품 생성 또는 수정 시 편집할 수 있습니다.',
       links: [
         {
-          title: 'Product Fields Specification',
+          title: '상품 필드 사양',
           url: '#'
         }
       ]

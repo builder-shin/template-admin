@@ -34,7 +34,7 @@ import { NavItem } from '@/types';
  */
 export const navItems: NavItem[] = [
   {
-    title: 'Dashboard',
+    title: '대시보드',
     url: '/dashboard/overview',
     icon: 'dashboard',
     isActive: false,
@@ -42,14 +42,14 @@ export const navItems: NavItem[] = [
     items: []
   },
   {
-    title: 'Workspaces',
+    title: '워크스페이스',
     url: '/dashboard/workspaces',
     icon: 'workspace',
     isActive: false,
     items: []
   },
   {
-    title: 'Teams',
+    title: '팀',
     url: '/dashboard/workspaces/team',
     icon: 'teams',
     isActive: false,
@@ -60,7 +60,7 @@ export const navItems: NavItem[] = [
     // access: { requireOrg: true, permission: 'org:teams:view' }
   },
   {
-    title: 'Product',
+    title: '상품',
     url: '/dashboard/product',
     icon: 'product',
     shortcut: ['p', 'p'],
@@ -68,7 +68,7 @@ export const navItems: NavItem[] = [
     items: []
   },
   {
-    title: 'Kanban',
+    title: '칸반',
     url: '/dashboard/kanban',
     icon: 'kanban',
     shortcut: ['k', 'k'],
@@ -76,13 +76,13 @@ export const navItems: NavItem[] = [
     items: []
   },
   {
-    title: 'Pro',
+    title: '프로',
     url: '#', // Placeholder as there is no direct link for the parent
     icon: 'pro',
     isActive: true,
     items: [
       {
-        title: 'Exclusive',
+        title: '전용 공간',
         url: '/dashboard/exclusive',
         icon: 'exclusive',
         shortcut: ['m', 'm']
@@ -90,19 +90,19 @@ export const navItems: NavItem[] = [
     ]
   },
   {
-    title: 'Account',
+    title: '계정',
     url: '#', // Placeholder as there is no direct link for the parent
     icon: 'account',
     isActive: true,
     items: [
       {
-        title: 'Profile',
+        title: '프로필',
         url: '/dashboard/profile',
         icon: 'profile',
         shortcut: ['m', 'm']
       },
       {
-        title: 'Billing',
+        title: '결제',
         url: '/dashboard/billing',
         icon: 'billing',
         shortcut: ['b', 'b'],
@@ -112,7 +112,7 @@ export const navItems: NavItem[] = [
         // access: { requireOrg: true, permission: 'org:manage:billing' }
       },
       {
-        title: 'Login',
+        title: '로그인',
         shortcut: ['l', 'l'],
         url: '/',
         icon: 'login'
