@@ -17,7 +17,7 @@ import {
   ChartTooltipContent
 } from '@/components/ui/chart';
 
-export const description = 'An interactive bar chart';
+export const description = '인터랙티브 막대 차트';
 
 const chartData = [
   { date: '2024-04-01', desktop: 222, mobile: 150 },
@@ -115,18 +115,18 @@ const chartData = [
 
 const chartConfig = {
   views: {
-    label: 'Page Views'
+    label: '페이지 조회수'
   },
   desktop: {
-    label: 'Desktop',
+    label: '데스크톱',
     color: 'var(--primary)'
   },
   mobile: {
-    label: 'Mobile',
+    label: '모바일',
     color: 'var(--primary)'
   },
   error: {
-    label: 'Error',
+    label: '오류',
     color: 'var(--primary)'
   }
 } satisfies ChartConfig;
@@ -163,12 +163,10 @@ export function BarGraph() {
     <Card className='@container/card !pt-3'>
       <CardHeader className='flex flex-col items-stretch space-y-0 border-b !p-0 sm:flex-row'>
         <div className='flex flex-1 flex-col justify-center gap-1 px-6 !py-0'>
-          <CardTitle>Bar Chart - Interactive</CardTitle>
+          <CardTitle>막대 차트 - 인터랙티브</CardTitle>
           <CardDescription>
-            <span className='hidden @[540px]/card:block'>
-              Total for the last 3 months
-            </span>
-            <span className='@[540px]/card:hidden'>Last 3 months</span>
+            <span className='hidden @[540px]/card:block'>최근 3개월 합계</span>
+            <span className='@[540px]/card:hidden'>최근 3개월</span>
           </CardDescription>
         </div>
         <div className='flex'>
@@ -228,7 +226,7 @@ export function BarGraph() {
               minTickGap={32}
               tickFormatter={(value) => {
                 const date = new Date(value);
-                return date.toLocaleDateString('en-US', {
+                return date.toLocaleDateString('ko-KR', {
                   month: 'short',
                   day: 'numeric'
                 });
@@ -241,7 +239,7 @@ export function BarGraph() {
                   className='w-[150px]'
                   nameKey='views'
                   labelFormatter={(value) => {
-                    return new Date(value).toLocaleDateString('en-US', {
+                    return new Date(value).toLocaleDateString('ko-KR', {
                       month: 'short',
                       day: 'numeric',
                       year: 'numeric'

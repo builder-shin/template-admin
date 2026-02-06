@@ -19,24 +19,24 @@ import {
 } from '@/components/ui/chart';
 
 const chartData = [
-  { month: 'January', desktop: 186, mobile: 80 },
-  { month: 'February', desktop: 305, mobile: 200 },
-  { month: 'March', desktop: 237, mobile: 120 },
-  { month: 'April', desktop: 73, mobile: 190 },
-  { month: 'May', desktop: 209, mobile: 130 },
-  { month: 'June', desktop: 214, mobile: 140 }
+  { month: '1월', desktop: 186, mobile: 80 },
+  { month: '2월', desktop: 305, mobile: 200 },
+  { month: '3월', desktop: 237, mobile: 120 },
+  { month: '4월', desktop: 73, mobile: 190 },
+  { month: '5월', desktop: 209, mobile: 130 },
+  { month: '6월', desktop: 214, mobile: 140 }
 ];
 
 const chartConfig = {
   visitors: {
-    label: 'Visitors'
+    label: '방문자'
   },
   desktop: {
-    label: 'Desktop',
+    label: '데스크톱',
     color: 'var(--primary)'
   },
   mobile: {
-    label: 'Mobile',
+    label: '모바일',
     color: 'var(--primary)'
   }
 } satisfies ChartConfig;
@@ -45,10 +45,8 @@ export function AreaGraph() {
   return (
     <Card className='@container/card'>
       <CardHeader>
-        <CardTitle>Area Chart - Stacked</CardTitle>
-        <CardDescription>
-          Showing total visitors for the last 6 months
-        </CardDescription>
+        <CardTitle>영역 차트 - 누적</CardTitle>
+        <CardDescription>최근 6개월 총 방문자 수</CardDescription>
       </CardHeader>
       <CardContent className='px-2 pt-4 sm:px-6 sm:pt-6'>
         <ChartContainer
@@ -122,11 +120,10 @@ export function AreaGraph() {
         <div className='flex w-full items-start gap-2 text-sm'>
           <div className='grid gap-2'>
             <div className='flex items-center gap-2 leading-none font-medium'>
-              Trending up by 5.2% this month{' '}
-              <IconTrendingUp className='h-4 w-4' />
+              이번 달 5.2% 상승 추세 <IconTrendingUp className='h-4 w-4' />
             </div>
             <div className='text-muted-foreground flex items-center gap-2 leading-none'>
-              January - June 2024
+              2024년 1월 - 6월
             </div>
           </div>
         </div>

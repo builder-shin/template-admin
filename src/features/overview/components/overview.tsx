@@ -22,26 +22,26 @@ export default function OverViewPage() {
       <div className='flex flex-1 flex-col space-y-2'>
         <div className='flex items-center justify-between space-y-2'>
           <h2 className='text-2xl font-bold tracking-tight'>
-            Hi, Welcome back 👋
+            안녕하세요, 돌아오신 것을 환영합니다 👋
           </h2>
           <div className='hidden items-center space-x-2 md:flex'>
-            <Button>Download</Button>
+            <Button>다운로드</Button>
           </div>
         </div>
         <Tabs defaultValue='overview' className='space-y-4'>
           <TabsList>
-            <TabsTrigger value='overview'>Overview</TabsTrigger>
+            <TabsTrigger value='overview'>개요</TabsTrigger>
             <TabsTrigger value='analytics' disabled>
-              Analytics
+              분석
             </TabsTrigger>
           </TabsList>
           <TabsContent value='overview' className='space-y-4'>
             <div className='*:data-[slot=card]:from-primary/5 *:data-[slot=card]:to-card dark:*:data-[slot=card]:bg-card grid grid-cols-1 gap-4 px-4 *:data-[slot=card]:bg-gradient-to-t *:data-[slot=card]:shadow-xs lg:px-6 @xl/main:grid-cols-2 @5xl/main:grid-cols-4'>
               <Card className='@container/card'>
                 <CardHeader>
-                  <CardDescription>Total Revenue</CardDescription>
+                  <CardDescription>총 매출</CardDescription>
                   <CardTitle className='text-2xl font-semibold tabular-nums @[250px]/card:text-3xl'>
-                    $1,250.00
+                    ₩1,250,000
                   </CardTitle>
                   <CardAction>
                     <Badge variant='outline'>
@@ -52,16 +52,14 @@ export default function OverViewPage() {
                 </CardHeader>
                 <CardFooter className='flex-col items-start gap-1.5 text-sm'>
                   <div className='line-clamp-1 flex gap-2 font-medium'>
-                    Trending up this month <IconTrendingUp className='size-4' />
+                    이번 달 상승 추세 <IconTrendingUp className='size-4' />
                   </div>
-                  <div className='text-muted-foreground'>
-                    Visitors for the last 6 months
-                  </div>
+                  <div className='text-muted-foreground'>최근 6개월 방문자</div>
                 </CardFooter>
               </Card>
               <Card className='@container/card'>
                 <CardHeader>
-                  <CardDescription>New Customers</CardDescription>
+                  <CardDescription>신규 고객</CardDescription>
                   <CardTitle className='text-2xl font-semibold tabular-nums @[250px]/card:text-3xl'>
                     1,234
                   </CardTitle>
@@ -74,16 +72,16 @@ export default function OverViewPage() {
                 </CardHeader>
                 <CardFooter className='flex-col items-start gap-1.5 text-sm'>
                   <div className='line-clamp-1 flex gap-2 font-medium'>
-                    Down 20% this period <IconTrendingDown className='size-4' />
+                    이번 기간 20% 감소 <IconTrendingDown className='size-4' />
                   </div>
                   <div className='text-muted-foreground'>
-                    Acquisition needs attention
+                    고객 확보에 주의 필요
                   </div>
                 </CardFooter>
               </Card>
               <Card className='@container/card'>
                 <CardHeader>
-                  <CardDescription>Active Accounts</CardDescription>
+                  <CardDescription>활성 계정</CardDescription>
                   <CardTitle className='text-2xl font-semibold tabular-nums @[250px]/card:text-3xl'>
                     45,678
                   </CardTitle>
@@ -96,16 +94,14 @@ export default function OverViewPage() {
                 </CardHeader>
                 <CardFooter className='flex-col items-start gap-1.5 text-sm'>
                   <div className='line-clamp-1 flex gap-2 font-medium'>
-                    Strong user retention <IconTrendingUp className='size-4' />
+                    높은 사용자 유지율 <IconTrendingUp className='size-4' />
                   </div>
-                  <div className='text-muted-foreground'>
-                    Engagement exceed targets
-                  </div>
+                  <div className='text-muted-foreground'>참여율 목표 초과</div>
                 </CardFooter>
               </Card>
               <Card className='@container/card'>
                 <CardHeader>
-                  <CardDescription>Growth Rate</CardDescription>
+                  <CardDescription>성장률</CardDescription>
                   <CardTitle className='text-2xl font-semibold tabular-nums @[250px]/card:text-3xl'>
                     4.5%
                   </CardTitle>
@@ -118,12 +114,9 @@ export default function OverViewPage() {
                 </CardHeader>
                 <CardFooter className='flex-col items-start gap-1.5 text-sm'>
                   <div className='line-clamp-1 flex gap-2 font-medium'>
-                    Steady performance increase{' '}
-                    <IconTrendingUp className='size-4' />
+                    꾸준한 성과 증가 <IconTrendingUp className='size-4' />
                   </div>
-                  <div className='text-muted-foreground'>
-                    Meets growth projections
-                  </div>
+                  <div className='text-muted-foreground'>성장 전망 달성</div>
                 </CardFooter>
               </Card>
             </div>
