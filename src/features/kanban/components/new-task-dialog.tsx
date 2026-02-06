@@ -33,14 +33,14 @@ export default function NewTaskDialog() {
     <Dialog>
       <DialogTrigger asChild>
         <Button variant='secondary' size='sm'>
-          ＋ Add New Todo
+          ＋ 새 할일 추가
         </Button>
       </DialogTrigger>
       <DialogContent className='sm:max-w-[425px]'>
         <DialogHeader>
-          <DialogTitle>Add New Todo</DialogTitle>
+          <DialogTitle>새 할일 추가</DialogTitle>
           <DialogDescription>
-            What do you want to get done today?
+            오늘 무엇을 완료하고 싶으신가요?
           </DialogDescription>
         </DialogHeader>
         <form
@@ -52,7 +52,7 @@ export default function NewTaskDialog() {
             <Input
               id='title'
               name='title'
-              placeholder='Todo title...'
+              placeholder='할일 제목...'
               className='col-span-4'
             />
           </div>
@@ -60,7 +60,7 @@ export default function NewTaskDialog() {
             <Textarea
               id='description'
               name='description'
-              placeholder='Description...'
+              placeholder='설명...'
               className='col-span-4'
             />
           </div>
@@ -68,7 +68,7 @@ export default function NewTaskDialog() {
         <DialogFooter>
           <DialogTrigger asChild>
             <Button type='submit' size='sm' form='todo-form'>
-              Add Todo
+              할일 추가
             </Button>
           </DialogTrigger>
         </DialogFooter>

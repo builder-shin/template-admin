@@ -31,15 +31,13 @@ export default function NewSectionDialog() {
     <Dialog>
       <DialogTrigger asChild>
         <Button variant='secondary' size='lg' className='w-full'>
-          ＋ Add New Section
+          ＋ 새 섹션 추가
         </Button>
       </DialogTrigger>
       <DialogContent className='sm:max-w-[425px]'>
         <DialogHeader>
-          <DialogTitle>Add New Section</DialogTitle>
-          <DialogDescription>
-            What section you want to add today?
-          </DialogDescription>
+          <DialogTitle>새 섹션 추가</DialogTitle>
+          <DialogDescription>어떤 섹션을 추가하시겠습니까?</DialogDescription>
         </DialogHeader>
         <form
           id='todo-form'
@@ -50,7 +48,7 @@ export default function NewSectionDialog() {
             <Input
               id='title'
               name='title'
-              placeholder='Section title...'
+              placeholder='섹션 제목...'
               className='col-span-4'
             />
           </div>
@@ -58,7 +56,7 @@ export default function NewSectionDialog() {
         <DialogFooter>
           <DialogTrigger asChild>
             <Button type='submit' size='sm' form='todo-form'>
-              Add Section
+              섹션 추가
             </Button>
           </DialogTrigger>
         </DialogFooter>

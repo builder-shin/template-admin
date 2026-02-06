@@ -48,7 +48,7 @@ export function BoardColumn({ column, tasks, isOverlay }: BoardColumnProps) {
       column
     } satisfies ColumnDragData,
     attributes: {
-      roleDescription: `Column: ${column.title}`
+      roleDescription: `열: ${column.title}`
     }
   });
 
@@ -85,7 +85,7 @@ export function BoardColumn({ column, tasks, isOverlay }: BoardColumnProps) {
           {...listeners}
           className='text-primary/50 relative -ml-2 h-auto cursor-grab p-1'
         >
-          <span className='sr-only'>{`Move column: ${column.title}`}</span>
+          <span className='sr-only'>{`열 이동: ${column.title}`}</span>
           <IconGripVertical />
         </Button>
         {/* <span className="mr-auto mt-0!"> {column.title}</span> */}

@@ -73,11 +73,11 @@ export function TaskCard({ task, isOverlay }: TaskCardProps) {
           {...listeners}
           className='text-secondary-foreground/50 -ml-2 h-auto cursor-grab p-1'
         >
-          <span className='sr-only'>Move task</span>
+          <span className='sr-only'>작업 이동</span>
           <IconGripVertical />
         </Button>
         <Badge variant={'outline'} className='ml-auto font-semibold'>
-          Task
+          작업
         </Badge>
       </CardHeader>
       <CardContent className='px-3 pt-3 pb-6 text-left whitespace-pre-wrap'>

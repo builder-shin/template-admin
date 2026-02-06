@@ -45,7 +45,7 @@ export function ColumnActions({
           e.preventDefault();
           setIsEditDisable(!editDisable);
           updateCol(id, name);
-          toast(`${title} updated to ${name}`);
+          toast(`${title}이(가) ${name}(으)로 변경되었습니다`);
         }}
       >
         <Input
@@ -59,7 +59,7 @@ export function ColumnActions({
       <DropdownMenu modal={false}>
         <DropdownMenuTrigger asChild>
           <Button variant='secondary' className='ml-1'>
-            <span className='sr-only'>Actions</span>
+            <span className='sr-only'>작업</span>
             <DotsHorizontalIcon className='h-4 w-4' />
           </Button>
         </DropdownMenuTrigger>
@@ -72,7 +72,7 @@ export function ColumnActions({
               }, 500);
             }}
           >
-            Rename
+            이름 변경
           </DropdownMenuItem>
           <DropdownMenuSeparator />
 
@@ -80,22 +80,20 @@ export function ColumnActions({
             onSelect={() => setShowDeleteDialog(true)}
             className='text-red-600'
           >
-            Delete Section
+            섹션 삭제
           </DropdownMenuItem>
         </DropdownMenuContent>
       </DropdownMenu>
       <AlertDialog open={showDeleteDialog} onOpenChange={setShowDeleteDialog}>
         <AlertDialogContent>
           <AlertDialogHeader>
-            <AlertDialogTitle>
-              Are you sure want to delete column?
-            </AlertDialogTitle>
+            <AlertDialogTitle>이 열을 삭제하시겠습니까?</AlertDialogTitle>
             <AlertDialogDescription>
-              NOTE: All tasks related to this category will also be deleted.
+              주의: 이 카테고리에 속한 모든 작업도 함께 삭제됩니다.
             </AlertDialogDescription>
           </AlertDialogHeader>
           <AlertDialogFooter>
-            <AlertDialogCancel>Cancel</AlertDialogCancel>
+            <AlertDialogCancel>취소</AlertDialogCancel>
             <Button
               variant='destructive'
               onClick={() => {
@@ -104,10 +102,10 @@ export function ColumnActions({
 
                 setShowDeleteDialog(false);
                 removeCol(id);
-                toast('This column has been deleted.');
+                toast('이 열이 삭제되었습니다.');
               }}
             >
-              Delete
+              삭제
             </Button>
           </AlertDialogFooter>
         </AlertDialogContent>
