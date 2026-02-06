@@ -8,8 +8,8 @@ import Link from 'next/link';
 import { InteractiveGridPattern } from './interactive-grid';
 
 export const metadata: Metadata = {
-  title: 'Authentication',
-  description: 'Authentication forms built using the components.'
+  title: '인증',
+  description: '컴포넌트를 사용하여 만든 인증 양식입니다.'
 };
 
 export default function SignInViewPage({ stars }: { stars: number }) {
@@ -22,7 +22,7 @@ export default function SignInViewPage({ stars }: { stars: number }) {
           'absolute top-4 right-4 hidden md:top-8 md:right-8'
         )}
       >
-        Login
+        로그인
       </Link>
       <div className='bg-muted relative hidden h-full flex-col p-10 text-white lg:flex dark:border-r'>
         <div className='absolute inset-0 bg-zinc-900' />
@@ -39,7 +39,7 @@ export default function SignInViewPage({ stars }: { stars: number }) {
           >
             <path d='M15 6v12a3 3 0 1 0 3-3H6a3 3 0 1 0 3 3V6a3 3 0 1 0-3 3h12a3 3 0 1 0-3-3' />
           </svg>
-          Logo
+          로고
         </div>
         <InteractiveGridPattern
           className={cn(
@@ -50,11 +50,10 @@ export default function SignInViewPage({ stars }: { stars: number }) {
         <div className='relative z-20 mt-auto'>
           <blockquote className='space-y-2'>
             <p className='text-lg'>
-              &ldquo;This starter template has saved me countless hours of work
-              and helped me deliver projects to my clients faster than ever
-              before.&rdquo;
+              &ldquo;이 스타터 템플릿 덕분에 수많은 시간을 절약하고 그 어느
+              때보다 빠르게 프로젝트를 완수할 수 있었습니다.&rdquo;
             </p>
-            <footer className='text-sm'>Random Dude</footer>
+            <footer className='text-sm'>익명 사용자</footer>
           </blockquote>
         </div>
       </div>
@@ -68,7 +67,7 @@ export default function SignInViewPage({ stars }: { stars: number }) {
           >
             <div className='flex items-center'>
               <GitHubLogoIcon className='size-4' />
-              <span className='ml-1 inline'>Star on GitHub</span>{' '}
+              <span className='ml-1 inline'>GitHub에서 스타 누르기</span>{' '}
             </div>
             <div className='ml-2 flex items-center gap-1 text-sm md:flex'>
               <IconStar
@@ -85,19 +84,19 @@ export default function SignInViewPage({ stars }: { stars: number }) {
           />
 
           <p className='text-muted-foreground px-8 text-center text-sm'>
-            By clicking continue, you agree to our{' '}
+            계속 진행하면 다음에 동의하는 것으로 간주됩니다:{' '}
             <Link
               href='/terms'
               className='hover:text-primary underline underline-offset-4'
             >
-              Terms of Service
+              서비스 이용약관
             </Link>{' '}
-            and{' '}
+            및{' '}
             <Link
               href='/privacy'
               className='hover:text-primary underline underline-offset-4'
             >
-              Privacy Policy
+              개인정보처리방침
             </Link>
             .
           </p>
