@@ -11,7 +11,7 @@ import { Suspense } from 'react';
 import { productInfoContent } from '@/config/infoconfig';
 
 export const metadata = {
-  title: 'Dashboard: Products'
+  title: '대시보드: 상품'
 };
 
 type pageProps = {
@@ -29,15 +29,15 @@ export default async function Page(props: pageProps) {
   return (
     <PageContainer
       scrollable={false}
-      pageTitle='Products'
-      pageDescription='Manage products (Server side table functionalities.)'
+      pageTitle='상품'
+      pageDescription='상품을 관리합니다 (서버 측 테이블 기능)'
       infoContent={productInfoContent}
       pageHeaderAction={
         <Link
           href='/dashboard/product/new'
           className={cn(buttonVariants(), 'text-xs md:text-sm')}
         >
-          <IconPlus className='mr-2 h-4 w-4' /> Add New
+          <IconPlus className='mr-2 h-4 w-4' /> 새 상품
         </Link>
       }
     >
