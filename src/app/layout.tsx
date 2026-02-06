@@ -16,8 +16,8 @@ const META_THEME_COLORS = {
 };
 
 export const metadata: Metadata = {
-  title: 'Next Shadcn',
-  description: 'Basic dashboard with Next.js and Shadcn'
+  title: 'Next Shadcn 대시보드',
+  description: 'Next.js와 Shadcn으로 구축한 대시보드'
 };
 
 export const viewport: Viewport = {
@@ -34,7 +34,7 @@ export default async function RootLayout({
   const themeToApply = activeThemeValue || DEFAULT_THEME;
 
   return (
-    <html lang='en' suppressHydrationWarning data-theme={themeToApply}>
+    <html lang='ko' suppressHydrationWarning data-theme={themeToApply}>
       <head>
         <script
           dangerouslySetInnerHTML={{
