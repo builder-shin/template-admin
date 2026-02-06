@@ -17,7 +17,6 @@
  */
 
 import { useMemo } from 'react';
-import { useOrganization, useUser } from '@clerk/nextjs';
 import type { NavItem } from '@/types';
 
 /**
@@ -27,13 +26,13 @@ import type { NavItem } from '@/types';
  * @returns Filtered items
  */
 export function useFilteredNavItems(items: NavItem[]) {
-  const { organization, membership } = useOrganization();
-  const { user } = useUser();
+  const user = null;
+  const organization = null;
 
   // Memoize context and permissions
   const accessContext = useMemo(() => {
-    const permissions = membership?.permissions || [];
-    const role = membership?.role;
+    const permissions: string[] = [];
+    const role = undefined;
 
     return {
       organization: organization ?? undefined,
@@ -42,7 +41,7 @@ export function useFilteredNavItems(items: NavItem[]) {
       role: role ?? undefined,
       hasOrg: !!organization
     };
-  }, [organization?.id, user?.id, membership?.permissions, membership?.role]);
+  }, [organization, user]);
 
   // Filter items synchronously (all client-side)
   const filteredItems = useMemo(() => {

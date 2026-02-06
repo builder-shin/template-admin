@@ -10,10 +10,15 @@ import {
   DropdownMenuTrigger
 } from '@/components/ui/dropdown-menu';
 import { UserAvatarProfile } from '@/components/user-avatar-profile';
-import { SignOutButton, useUser } from '@clerk/nextjs';
 import { useRouter } from 'next/navigation';
 export function UserNav() {
-  const { user } = useUser();
+  const user = {
+    firstName: '사용자',
+    lastName: '',
+    imageUrl: '',
+    emailAddresses: [{ emailAddress: 'user@example.com' }],
+    fullName: '사용자'
+  };
   const router = useRouter();
   if (user) {
     return (
@@ -49,8 +54,13 @@ export function UserNav() {
             <DropdownMenuItem>새 팀</DropdownMenuItem>
           </DropdownMenuGroup>
           <DropdownMenuSeparator />
-          <DropdownMenuItem>
-            <SignOutButton redirectUrl='/auth/sign-in' />
+          <DropdownMenuItem asChild>
+            <button
+              onClick={() => (window.location.href = '/auth/sign-in')}
+              className='flex w-full items-center'
+            >
+              로그아웃
+            </button>
           </DropdownMenuItem>
         </DropdownMenuContent>
       </DropdownMenu>
