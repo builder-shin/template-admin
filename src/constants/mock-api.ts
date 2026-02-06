@@ -29,14 +29,14 @@ export const fakeProducts = {
     const sampleProducts: Product[] = [];
     function generateRandomProductData(id: number): Product {
       const categories = [
-        'Electronics',
-        'Furniture',
-        'Clothing',
-        'Toys',
-        'Groceries',
-        'Books',
-        'Jewelry',
-        'Beauty Products'
+        '전자제품',
+        '가구',
+        '의류',
+        '장난감',
+        '식료품',
+        '도서',
+        '주얼리',
+        '뷰티'
       ];
 
       return {
@@ -119,7 +119,7 @@ export const fakeProducts = {
     return {
       success: true,
       time: currentTime,
-      message: 'Sample data for testing and learning purposes',
+      message: '테스트 및 학습용 샘플 데이터',
       total_products: totalProducts,
       offset,
       limit,
@@ -137,7 +137,7 @@ export const fakeProducts = {
     if (!product) {
       return {
         success: false,
-        message: `Product with ID ${id} not found`
+        message: `ID ${id}인 상품을 찾을 수 없습니다`
       };
     }
 
@@ -147,7 +147,7 @@ export const fakeProducts = {
     return {
       success: true,
       time: currentTime,
-      message: `Product with ID ${id} found`,
+      message: `ID ${id}인 상품을 찾았습니다`,
       product
     };
   }

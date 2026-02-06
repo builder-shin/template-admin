@@ -10,7 +10,7 @@ export default async function ProductViewPage({
   productId
 }: TProductViewPageProps) {
   let product = null;
-  let pageTitle = 'Create New Product';
+  let pageTitle = '새 상품 등록';
 
   if (productId !== 'new') {
     const data = await fakeProducts.getProductById(Number(productId));
@@ -18,7 +18,7 @@ export default async function ProductViewPage({
     if (!product) {
       notFound();
     }
-    pageTitle = `Edit Product`;
+    pageTitle = `상품 수정`;
   }
 
   return <ProductForm initialData={product} pageTitle={pageTitle} />;

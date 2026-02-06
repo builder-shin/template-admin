@@ -24,22 +24,22 @@ const ACCEPTED_IMAGE_TYPES = [
 const formSchema = z.object({
   image: z
     .any()
-    .refine((files) => files?.length == 1, 'Image is required.')
+    .refine((files) => files?.length == 1, '이미지는 필수입니다.')
     .refine(
       (files) => files?.[0]?.size <= MAX_FILE_SIZE,
-      `Max file size is 5MB.`
+      `최대 파일 크기는 5MB입니다.`
     )
     .refine(
       (files) => ACCEPTED_IMAGE_TYPES.includes(files?.[0]?.type),
-      '.jpg, .jpeg, .png and .webp files are accepted.'
+      '.jpg, .jpeg, .png, .webp 파일만 허용됩니다.'
     ),
   name: z.string().min(2, {
-    message: 'Product name must be at least 2 characters.'
+    message: '상품명은 최소 2자 이상이어야 합니다.'
   }),
   category: z.string(),
   price: z.number(),
   description: z.string().min(10, {
-    message: 'Description must be at least 10 characters.'
+    message: '설명은 최소 10자 이상이어야 합니다.'
   })
 });
 
@@ -86,8 +86,8 @@ export default function ProductForm({
           <FormFileUpload
             control={form.control}
             name='image'
-            label='Product Image'
-            description='Upload a product image'
+            label='상품 이미지'
+            description='상품 이미지를 업로드하세요'
             config={{
               maxSize: 5 * 1024 * 1024,
               maxFiles: 4
@@ -98,32 +98,32 @@ export default function ProductForm({
             <FormInput
               control={form.control}
               name='name'
-              label='Product Name'
-              placeholder='Enter product name'
+              label='상품명'
+              placeholder='상품명을 입력하세요'
               required
             />
 
             <FormSelect
               control={form.control}
               name='category'
-              label='Category'
-              placeholder='Select category'
+              label='카테고리'
+              placeholder='카테고리를 선택하세요'
               required
               options={[
                 {
-                  label: 'Beauty Products',
+                  label: '뷰티',
                   value: 'beauty'
                 },
                 {
-                  label: 'Electronics',
+                  label: '전자제품',
                   value: 'electronics'
                 },
                 {
-                  label: 'Home & Garden',
+                  label: '홈 & 가든',
                   value: 'home'
                 },
                 {
-                  label: 'Sports & Outdoors',
+                  label: '스포츠 & 아웃도어',
                   value: 'sports'
                 }
               ]}
@@ -132,8 +132,8 @@ export default function ProductForm({
             <FormInput
               control={form.control}
               name='price'
-              label='Price'
-              placeholder='Enter price'
+              label='가격'
+              placeholder='가격을 입력하세요'
               required
               type='number'
               min={0}
@@ -144,8 +144,8 @@ export default function ProductForm({
           <FormTextarea
             control={form.control}
             name='description'
-            label='Description'
-            placeholder='Enter product description'
+            label='설명'
+            placeholder='상품 설명을 입력하세요'
             required
             config={{
               maxLength: 500,
@@ -154,7 +154,7 @@ export default function ProductForm({
             }}
           />
 
-          <Button type='submit'>Add Product</Button>
+          <Button type='submit'>상품 추가</Button>
         </Form>
       </CardContent>
     </Card>

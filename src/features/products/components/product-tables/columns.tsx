@@ -11,7 +11,7 @@ import { CATEGORY_OPTIONS } from './options';
 export const columns: ColumnDef<Product>[] = [
   {
     accessorKey: 'photo_url',
-    header: 'IMAGE',
+    header: '이미지',
     cell: ({ row }) => {
       return (
         <div className='relative aspect-square'>
@@ -29,12 +29,12 @@ export const columns: ColumnDef<Product>[] = [
     id: 'name',
     accessorKey: 'name',
     header: ({ column }: { column: Column<Product, unknown> }) => (
-      <DataTableColumnHeader column={column} title='Name' />
+      <DataTableColumnHeader column={column} title='이름' />
     ),
     cell: ({ cell }) => <div>{cell.getValue<Product['name']>()}</div>,
     meta: {
-      label: 'Name',
-      placeholder: 'Search products...',
+      label: '이름',
+      placeholder: '상품 검색...',
       variant: 'text',
       icon: Text
     },
@@ -44,7 +44,7 @@ export const columns: ColumnDef<Product>[] = [
     id: 'category',
     accessorKey: 'category',
     header: ({ column }: { column: Column<Product, unknown> }) => (
-      <DataTableColumnHeader column={column} title='Category' />
+      <DataTableColumnHeader column={column} title='카테고리' />
     ),
     cell: ({ cell }) => {
       const status = cell.getValue<Product['category']>();
@@ -59,18 +59,18 @@ export const columns: ColumnDef<Product>[] = [
     },
     enableColumnFilter: true,
     meta: {
-      label: 'categories',
+      label: '카테고리',
       variant: 'multiSelect',
       options: CATEGORY_OPTIONS
     }
   },
   {
     accessorKey: 'price',
-    header: 'PRICE'
+    header: '가격'
   },
   {
     accessorKey: 'description',
-    header: 'DESCRIPTION'
+    header: '설명'
   },
 
   {
