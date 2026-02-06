@@ -28,17 +28,17 @@ export const AlertModal: React.FC<AlertModalProps> = ({
 
   return (
     <Modal
-      title='Are you sure?'
-      description='This action cannot be undone.'
+      title='정말 진행하시겠습니까?'
+      description='이 작업은 되돌릴 수 없습니다.'
       isOpen={isOpen}
       onClose={onClose}
     >
       <div className='flex w-full items-center justify-end space-x-2 pt-6'>
         <Button disabled={loading} variant='outline' onClick={onClose}>
-          Cancel
+          취소
         </Button>
         <Button disabled={loading} variant='destructive' onClick={onConfirm}>
-          Continue
+          계속
         </Button>
       </div>
     </Modal>

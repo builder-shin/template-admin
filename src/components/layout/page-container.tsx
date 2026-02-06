@@ -44,7 +44,7 @@ export default function PageContainer({
       <div className='flex flex-1 items-center justify-center p-4 md:px-6'>
         {accessFallback ?? (
           <div className='text-muted-foreground text-center text-lg'>
-            You do not have access to this page.
+            이 페이지에 접근 권한이 없습니다.
           </div>
         )}
       </div>

@@ -269,8 +269,8 @@ function Infobar({
           side={side}
         >
           <SheetHeader className='sr-only'>
-            <SheetTitle>Infobar</SheetTitle>
-            <SheetDescription>Displays the mobile infobar.</SheetDescription>
+            <SheetTitle>정보 패널</SheetTitle>
+            <SheetDescription>모바일 정보 패널을 표시합니다.</SheetDescription>
           </SheetHeader>
           <div className='flex h-full w-full flex-col'>{children}</div>
         </SheetContent>
@@ -345,7 +345,7 @@ function InfobarTrigger({
       variant='ghost'
       size='icon'
       className={cn('size-7', className)}
-      aria-label='Toggle info infobar'
+      aria-label='정보 패널 토글'
       onClick={(event) => {
         onClick?.(event);
         toggleInfobar();
@@ -353,7 +353,7 @@ function InfobarTrigger({
       {...props}
     >
       <CircleXIcon className='size-7' />
-      <span className='sr-only'>Toggle Infobar</span>
+      <span className='sr-only'>정보 패널 토글</span>
     </Button>
   );
 }
@@ -365,10 +365,10 @@ function InfobarRail({ className, ...props }: React.ComponentProps<'button'>) {
     <button
       data-infobar='rail'
       data-slot='infobar-rail'
-      aria-label='Toggle Infobar'
+      aria-label='정보 패널 토글'
       tabIndex={-1}
       onClick={toggleInfobar}
-      title='Toggle Infobar'
+      title='정보 패널 토글'
       className={cn(
         'hover:after:bg-sidebar-border absolute inset-y-0 z-20 hidden w-4 -translate-x-1/2 transition-all ease-linear group-data-[side=left]:-right-4 group-data-[side=right]:left-0 after:absolute after:inset-y-0 after:left-1/2 after:w-[2px] sm:flex',
         'in-data-[side=left]:cursor-w-resize in-data-[side=right]:cursor-e-resize',
