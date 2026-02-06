@@ -1,6 +1,5 @@
 import { buttonVariants } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
-import { SignIn as ClerkSignInForm } from '@clerk/nextjs';
 import { GitHubLogoIcon } from '@radix-ui/react-icons';
 import { IconStar } from '@tabler/icons-react';
 import { Metadata } from 'next';
@@ -77,11 +76,11 @@ export default function SignInViewPage({ stars }: { stars: number }) {
               <span className='font-display font-medium'>{stars}</span>
             </div>
           </Link>
-          <ClerkSignInForm
-            initialValues={{
-              emailAddress: 'your_mail+clerk_test@example.com'
-            }}
-          />
+          <div className='flex w-full items-center justify-center rounded-lg border border-dashed p-8'>
+            <p className='text-muted-foreground text-center'>
+              로그인 기능이 비활성화되었습니다.
+            </p>
+          </div>
 
           <p className='text-muted-foreground px-8 text-center text-sm'>
             계속 진행하면 다음에 동의하는 것으로 간주됩니다:{' '}
