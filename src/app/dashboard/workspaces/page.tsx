@@ -1,35 +1,18 @@
 'use client';
 
 import PageContainer from '@/components/layout/page-container';
-import { OrganizationList } from '@clerk/nextjs';
-import { dark } from '@clerk/themes';
-import { useTheme } from 'next-themes';
 import { workspacesInfoContent } from '@/config/infoconfig';
 
 export default function WorkspacesPage() {
-  const { theme } = useTheme();
-  const isDark = theme === 'dark';
-
   return (
     <PageContainer
       pageTitle='워크스페이스'
       pageDescription='워크스페이스를 관리하고 전환합니다'
       infoContent={workspacesInfoContent}
     >
-      <OrganizationList
-        appearance={{
-          baseTheme: isDark ? dark : undefined,
-          elements: {
-            organizationListBox: 'space-y-2',
-            organizationPreview: 'rounded-lg border p-4 hover:bg-accent',
-            organizationPreviewMainIdentifier: 'text-lg font-semibold',
-            organizationPreviewSecondaryIdentifier:
-              'text-sm text-muted-foreground'
-          }
-        }}
-        afterSelectOrganizationUrl='/dashboard/workspaces/team'
-        afterCreateOrganizationUrl='/dashboard/workspaces/team'
-      />
+      <div className='text-muted-foreground p-8 text-center'>
+        워크스페이스 관리 기능이 비활성화되었습니다.
+      </div>
     </PageContainer>
   );
 }
