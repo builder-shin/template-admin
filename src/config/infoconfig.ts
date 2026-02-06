@@ -6,24 +6,14 @@ export const workspacesInfoContent: InfobarContent = {
     {
       title: '개요',
       description:
-        '워크스페이스 페이지에서 워크스페이스를 관리하고 전환할 수 있습니다. 이 기능은 멀티 테넌트 워크스페이스 관리를 지원하는 Clerk Organizations 기반입니다. 사용 가능한 모든 워크스페이스를 확인하고, 새로 생성하거나 활성 워크스페이스를 전환할 수 있습니다.',
-      links: [
-        {
-          title: 'Clerk Organizations 문서',
-          url: 'https://clerk.com/docs/organizations/overview'
-        }
-      ]
+        '워크스페이스 페이지에서 워크스페이스를 관리하고 전환할 수 있습니다. 이 기능은 멀티 테넌트 워크스페이스 관리를 지원합니다. 사용 가능한 모든 워크스페이스를 확인하고, 새로 생성하거나 활성 워크스페이스를 전환할 수 있습니다.',
+      links: []
     },
     {
       title: '워크스페이스 생성',
       description:
         '새 워크스페이스를 생성하려면 "조직 만들기" 버튼을 클릭하세요. 워크스페이스 이름을 입력하고 초기 설정을 구성할 수 있습니다. 생성 후 새 워크스페이스로 전환하여 관리를 시작할 수 있습니다.',
-      links: [
-        {
-          title: '멀티 테넌트 인증 가이드',
-          url: 'https://clerk.com/blog/how-to-build-multitenant-authentication-with-clerk'
-        }
-      ]
+      links: []
     },
     {
       title: '워크스페이스 전환',
@@ -40,13 +30,8 @@ export const workspacesInfoContent: InfobarContent = {
     {
       title: '서버 측 권한 검사',
       description:
-        '이 애플리케이션은 멀티 테넌트 인증을 위한 Clerk 권장 패턴을 따릅니다. 서버 측 권한 검사를 통해 사용자가 활성 조직의 리소스에만 접근할 수 있도록 보장합니다.',
-      links: [
-        {
-          title: 'Clerk Organizations 문서',
-          url: 'https://clerk.com/docs/organizations/overview'
-        }
-      ]
+        '이 애플리케이션은 멀티 테넌트 인증을 위한 권장 패턴을 따릅니다. 서버 측 권한 검사를 통해 사용자가 활성 조직의 리소스에만 접근할 수 있도록 보장합니다.',
+      links: []
     }
   ]
 };
@@ -57,13 +42,8 @@ export const teamInfoContent: InfobarContent = {
     {
       title: '개요',
       description:
-        '팀 관리 페이지에서 팀원, 역할, 보안 설정 등을 관리할 수 있습니다. 이 페이지는 Clerk의 OrganizationProfile 컴포넌트를 통해 종합적인 조직 관리 기능을 제공합니다.',
-      links: [
-        {
-          title: 'Clerk Organizations 문서',
-          url: 'https://clerk.com/docs/organizations/overview'
-        }
-      ]
+        '팀 관리 페이지에서 팀원, 역할, 보안 설정 등을 관리할 수 있습니다. 이 페이지는 종합적인 조직 관리 기능을 제공합니다.',
+      links: []
     },
     {
       title: '팀원 관리',
@@ -74,13 +54,8 @@ export const teamInfoContent: InfobarContent = {
     {
       title: '역할 및 권한',
       description:
-        'Clerk 대시보드의 Organizations 설정에서 기본 역할과 권한을 구성하세요. 역할은 팀원이 워크스페이스 내에서 수행할 수 있는 작업을 정의합니다. 일반적인 역할에는 관리자, 멤버 및 사용자 정의 역할이 있습니다.',
-      links: [
-        {
-          title: 'Clerk Organizations 문서',
-          url: 'https://clerk.com/docs/organizations/overview'
-        }
-      ]
+        '대시보드의 Organizations 설정에서 기본 역할과 권한을 구성하세요. 역할은 팀원이 워크스페이스 내에서 수행할 수 있는 작업을 정의합니다. 일반적인 역할에는 관리자, 멤버 및 사용자 정의 역할이 있습니다.',
+      links: []
     },
     {
       title: '보안 설정',
@@ -109,29 +84,19 @@ export const billingInfoContent: InfobarContent = {
     {
       title: '개요',
       description:
-        '결제 페이지에서 조직의 구독 및 사용 한도를 관리할 수 있습니다. 요금제와 구독은 Clerk Billing for B2B를 통해 관리되며, Stripe 결제 처리가 통합된 조직 수준의 구독 관리를 제공합니다.',
-      links: [
-        {
-          title: 'Clerk Billing 문서',
-          url: 'https://clerk.com/docs/billing/overview'
-        }
-      ]
+        '결제 페이지에서 조직의 구독 및 사용 한도를 관리할 수 있습니다. 요금제와 구독을 통해 조직 수준의 구독 관리와 Stripe를 통한 결제 처리가 통합됩니다.',
+      links: []
     },
     {
       title: '이용 가능한 요금제',
       description:
-        '요금표를 통해 이용 가능한 요금제를 확인하고 구독할 수 있습니다. 요금제는 Clerk 대시보드에서 생성 및 관리됩니다. 요금제에서 "공개" 옵션을 활성화하면 요금표에 표시됩니다. 일반적인 요금제에는 무료, 프로, 팀 등급이 있습니다.',
-      links: [
-        {
-          title: 'Clerk 대시보드 - 요금제',
-          url: 'https://dashboard.clerk.com/~/billing/plans'
-        }
-      ]
+        '요금표를 통해 이용 가능한 요금제를 확인하고 구독할 수 있습니다. 요금제는 대시보드에서 생성 및 관리됩니다. 요금제에서 "공개" 옵션을 활성화하면 요금표에 표시됩니다. 일반적인 요금제에는 무료, 프로, 팀 등급이 있습니다.',
+      links: []
     },
     {
       title: '요금제 기능',
       description:
-        '각 요금제에는 애플리케이션 기능을 활성화하는 특정 기능이 포함될 수 있습니다. 기능은 Clerk 대시보드에서 요금제에 추가되며, 코드에서 has() 함수의 feature 검사를 통해 확인할 수 있습니다.',
+        '각 요금제에는 애플리케이션 기능을 활성화하는 특정 기능이 포함될 수 있습니다. 기능은 대시보드에서 요금제에 추가되며, 코드에서 has() 함수의 feature 검사를 통해 확인할 수 있습니다.',
       links: []
     },
     {
@@ -143,24 +108,19 @@ export const billingInfoContent: InfobarContent = {
     {
       title: '결제 비용 구조',
       description:
-        'Clerk Billing은 거래당 0.7%의 수수료가 발생하며, Stripe에 직접 지불하는 거래 수수료가 추가됩니다. Clerk Billing은 Stripe Billing과 다릅니다. 요금제와 가격은 Clerk 대시보드를 통해 관리되며 기존 Stripe 제품과 동기화되지 않습니다. Clerk은 결제 처리에만 Stripe를 사용합니다.',
+        '결제 처리는 Stripe를 통해 이루어지며, 거래 수수료가 발생합니다. 요금제와 가격은 대시보드를 통해 관리됩니다.',
       links: []
     },
     {
       title: '설정 요구사항',
       description:
-        '결제를 활성화하려면 Clerk 대시보드의 결제 설정으로 이동하여 애플리케이션에 대한 결제를 활성화하세요. Clerk 개발 게이트웨이(테스트용) 또는 자체 Stripe 계정(프로덕션용) 중 선택할 수 있습니다. 참고: 개발용으로 생성된 Stripe 계정은 프로덕션에서 사용할 수 없습니다.',
-      links: [
-        {
-          title: '결제 설정',
-          url: 'https://dashboard.clerk.com/~/billing/settings'
-        }
-      ]
+        '결제를 활성화하려면 대시보드의 결제 설정으로 이동하여 애플리케이션에 대한 결제를 활성화하세요. 테스트용 개발 환경 또는 프로덕션용 자체 Stripe 계정 중 선택할 수 있습니다.',
+      links: []
     },
     {
       title: '베타 상태',
       description:
-        '결제 기능은 현재 베타이며 API는 실험적이고 호환성이 깨지는 변경이 있을 수 있습니다. 잠재적 문제를 방지하려면 SDK와 clerk-js 패키지 버전을 고정하는 것을 권장합니다.',
+        '결제 기능은 현재 베타이며 API는 실험적이고 호환성이 깨지는 변경이 있을 수 있습니다. 잠재적 문제를 방지하려면 SDK 패키지 버전을 고정하는 것을 권장합니다.',
       links: []
     }
   ]
